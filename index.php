@@ -1,7 +1,8 @@
 <?php
 require "vendor/autoload.php";
 
-$repository = new Repository;
+$database = new Database;
+$repository = new Repository($database);
 $data = $repository->getAll();
 
 var_dump($data);
